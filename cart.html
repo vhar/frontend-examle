@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+        <title>Рыболовный маказин "Клюёт!"</title>
+        <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/cart.js"></script>
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="popup-wrapper"><div id="popup-content"><span class="popup-close"></span></div></div>
+        <div class="cookies-message">
+            <span class="cookies_text">Мы используем cookies для наилучшего представления нашего сайта. Отключить cookies Вы можете в настройках своего браузера.</span>
+            <button class="cookies-button">OK</button>
+        </div>
+        <div class="location-wrapper">
+            <div id="location" class="location container">Ваш город: <span>&nbsp;</span></div>
+        </div>
+        <header class="init">
+            <div class="header container">
+                <a href="index.html">
+                    <div class="logo"><img class="logo-full" src="images/logo-full.svg" alt="Клюёт!"><img class="logo-small" src="images/logo-small.svg" alt="Клюёт!"></div>
+                </a>
+                <div class="search">
+                    <form class="search-form">
+                        <input type="search" class="query" name="query" placeholder="Найти в магазине">
+                        <button type="button" class="search-button"></button>
+                    </form>
+                </div>
+                <a href="cart.html" class="header-item cart">Корзина</a>
+                <a  class="header-item login">Вход</a>
+            </div>
+            <nav class="header container">
+                <a href="index.html"  title="Главная страница" class="nav-home"><span>Главная страница</span></a>
+                <a href="catalog.html" title="Каталог" class="nav-catalog" ><span>Каталог</span></a>
+                <a class="nav-payment" title="Оплата"><span>Оплата</span></a>
+                <a class="nav-delivery" title="Доставка"><span>Доставка</span></a>
+                <a href="contacts.html" title = "Контакты" class="nav-contacts"><span>Контакты</span></a>
+                <a href="cart.html" title="Корзина" class="nav-cart"><span>Корзина</span></a>
+                <a class="nav-login" titlе="Выход"><span>Вход</span></a>
+            </nav>
+        </header>
+        <main>
+            <div class="container order-form-wrapper">
+                <form name="order-form" id="order-form" method="post">
+                    <h4>Содержимое корзины</h4>
+                    <div class="order-items"></div>
+                    <div class="separator"></div>
+                    <h4>Информация для доставки</h4>
+                    <label for="fullname">Ваше имя
+                        <input type="text" id="fullname" class="required" name="fullname" value="" placeholder="Ваше имя">
+                    </label>
+                    <label for="phone">Контактный телефон
+                        <input type="text" id="phone" class="required" name="phone" value="" placeholder="Ваш телефон">
+                    </label>
+                    <label for="email">Ваш e-mail
+                        <input type="email" id="email" name="email" value="" placeholder="Email">
+                    </label>
+                    <label for="delivery-date">Жедаемая дата доставки
+                        <input type="text" id="delivery-date" class="required" name="delivery-date" value="">
+                    </label>
+                    <label for="message">Комментарий к заказу
+                        <textarea id="message" name="message" placeholder="Комментарий к заказу"></textarea>
+                    </label>
+                    <input type="checkbox" class="checkbox" name="policy-agreements" id="policy-agreements" value="1">
+                    <label for="policy-agreements"><span>Нажимая кнопку "Отправить", я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных в соответсвтии с <a>Условиями</a></span></label>
+                    <button type="button" id="order-confirm">Отправить</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer container">
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Покупателям</h4>
+                    <ul>
+                        <li><a>Как сделать заказ</a></li>
+                        <li><a>Способы оплаты</a></li>
+                        <li><a>Доставка</a></li>
+                        <li><a>Возврат товара</a></li>
+                        <li><a>Возврат денежных средств</a></li>
+                        <li><a>Вопросы и ответы</a></li>
+                    </ul>                    
+                </nav>
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Компания</h4>
+                    <ul>
+                        <li><a>О нас</a></li>
+                        <li><a>Реквизиты</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Соцсети</h4>
+                    <ul>
+                        <li><a href="https://vk.com/novgoroskylc">ВКонтакте</a></li>
+                        <li><a>Однокрассники</a></li>
+                        <li><a href="https://www.youtube.com/c/NovgorodskyLeatherCraft">Yotube</a></li>
+                        <li><a href="https://dzen.ru/novgorodskylc">Дзен</a></li>
+                        <li><a href="https://t.me/novgoroskylc">Телеграм</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-item">
+                    <h4>+7(000) 000-00-00</h4>
+                    <div>пн-чт: с 10<sup>00</sup> до 18<sup>00</sup></div>
+                    <div>пт: с 10<sup>00</sup> до 16<sup>00</sup></div>
+                    <div>сб,вс: выходной</div>
+                </div>
+            </div>
+            <div class="copy container">&copy; 2022 ИП Хариненков В.В.</div>
+        </footer>
+    </body>
+</html>

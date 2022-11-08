@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+        <title>Рыболовный маказин "Клюёт!"</title>
+        <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/pagination.js"></script>
+        <script type="text/javascript" src="js/filter.js"></script>
+        <script type="text/javascript" src="js/catalog-menu.js"></script>
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="popup-wrapper"><div id="popup-content"><span class="popup-close"></span></div></div>
+        <div class="cookies-message">
+            <span class="cookies_text">Мы используем cookies для наилучшего представления нашего сайта. Отключить cookies Вы можете в настройках своего браузера.</span>
+            <button class="cookies-button">OK</button>
+        </div>
+        <div class="location-wrapper">
+            <div id="location" class="location container">Ваш город: <span>&nbsp;</span></div>
+        </div>
+        <header class="init">
+            <div class="header container">
+                <a href="index.html">
+                    <div class="logo"><img class="logo-full" src="images/logo-full.svg" alt="Клюёт!"><img class="logo-small" src="images/logo-small.svg" alt="Клюёт!"></div>
+                </a>
+                <div class="search">
+                    <form class="search-form">
+                        <input type="search" class="query" name="query" placeholder="Найти в магазине">
+                        <button type="button" class="search-button"></button>
+                    </form>
+                </div>
+                <a href="cart.html" class="header-item cart">Корзина</a>
+                <a class="header-item login">Вход</a>
+            </div>
+            <nav class="header container">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="index.html"  title="Главная страница" class="nav-home"><span>Главная страница</span></a>
+                <a href="catalog.html" title="Каталог" class="nav-catalog" ><span>Каталог</span></a>
+                <a class="nav-payment" title="Оплата"><span>Оплата</span></a>
+                <a class="nav-delivery" title="Доставка"><span>Доставка</span></a>
+                <a href="contacts.html" title = "Контакты" class="nav-contacts"><span>Контакты</span></a>
+                <a href="cart.html" title="Корзина" class="nav-cart"><span>Корзина</span></a>
+                <a class="nav-login" titlе="Выход"><span>Вход</span></a>
+            </nav>
+        </header>
+        <main>
+            <div class="container catalog">
+                <aside>
+                    <nav class="side">
+                        <ul>
+                            <li id="menu-item-1" class="menu-item menu-multiple menu-depth-1 collapsed">
+                                <a>Катушки</a>
+                                <ul>
+                                    <li id="menu-item-11" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=11">Baitrunner</a>
+                                    </li>
+                                    <li id="menu-item-12" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=12">Карповые</a>
+                                    </li>
+                                    <li id="menu-item-13" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=13">Кастинговые</a>
+                                    </li>
+                                    <li id="menu-item-14" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=14">Нахлыстовые</a>
+                                    </li>
+                                    <li id="menu-item-15" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=14">Передний фрикцион</a>
+                                    </li>
+                                    <li id="menu-item-15" class="menu-item menu-multiple menu-depth-2 collapsed">
+                                        <a>Задний фрикцион</a>
+                                        <ul>
+                                            <li id="menu-item-141" class="menu-item menu-single menu-depth-3">
+                                                <a href="?category=141">Daiwa</a>
+                                            </li>
+                                            <li id="menu-item-142" class="menu-item menu-single menu-depth-3">
+                                                <a href="?category=142">Salmo</a>
+                                            </li>
+                                            <li id="menu-item-143" class="menu-item menu-single menu-depth-3">
+                                                <a href="?category=143">Shimano</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-2" class="menu-item menu-single menu-depth-1">
+                                <a href="?category=2">Плетеные шнуры</a>
+                            </li>
+                            <li id="menu-item-3" class="menu-item menu-single menu-depth-1">
+                                <a href="?category=3">Лески монофильные</a>
+                            </li>
+                            <li id="menu-item-4" class="menu-item menu-multiple menu-depth-1 collapsed">
+                                <a>Удилища</a>
+                                <ul>
+                                    <li id="menu-item-41" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=41">Карповые</a>
+                                    </li>
+                                    <li id="menu-item-42" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=42">Маховые</a>
+                                    </li>
+                                    <li id="menu-item-43" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=43">Спиннинги</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-5" class="menu-item menu-multiple menu-depth-1 collapsed">
+                                <a>Приманки</a>
+                                <ul>
+                                    <li id="menu-item-51" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=51">Блесны</a>
+                                    </li>
+                                    <li id="menu-item-52" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=52">Воблеры</a>
+                                    </li>
+                                    <li id="menu-item-53" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=53">Силиконовые</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-6" class="menu-item menu-multiple menu-depth-1 collapsed">
+                                <a>Крючки</a>
+                                <ul>
+                                    <li id="menu-item-61" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=61">Двойные</a>
+                                    </li>
+                                    <li id="menu-item-62" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=62">Трофейные</a>
+                                    </li>
+                                    <li id="menu-item-63" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=63">Джиг-головки</a>
+                                    </li>
+                                    <li id="menu-item-64" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=64">Нахлыстовые</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-7" class="menu-item menu-multiple menu-depth-1 collapsed">
+                                <a>Зимний ассортимент</a>
+                                <ul>
+                                    <li id="menu-item-71" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=71">Удилища</a>
+                                    </li>
+                                    <li id="menu-item-72" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=72">Кормушки</a>
+                                    </li>
+                                    <li id="menu-item-73" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=73">Мормышки</a>
+                                    </li>
+                                    <li id="menu-item-74" class="menu-item menu-single menu-depth-2">
+                                        <a href="?category=74">Ледобуры</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="filters">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <form name="filter-form" method="get">
+                            <h4>Фильтры</h4>
+                            <div>Цена, &#8381;</div>
+                            <div class="range-form">
+                                <div class="range-from">
+                                    <span>От</span>
+                                    <div>
+                                        <input type="text" name="cost-from" id="cost-from" value="0">
+                                    </div>
+                                </div>
+                                <div class="range-to">
+                                    <span>До</span>
+                                    <div>
+                                        <input type="text" name="cost-to" id="cost-to" value="25000">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="separator"></div>
+                            <div class="cost"></div>
+                            <div class="separator"></div>
+                            <div>
+                                <input type="checkbox" class="checkbox" name="in-stock" id="in-stock" value="1">
+                                <label for="in-stock">В наличии</label>
+                            </div>
+                            <div class="separator"></div>
+                            <div>
+                                <input type="checkbox" class="checkbox" name="is-new" id="is-new" value="1">
+                                <label for="is-new">Новинка</label>
+                            </div>
+                            <div class="separator"></div>
+                            <button type="submit">Показать</button>
+                        </form>
+                    </div>
+                </aside>
+                <div class="product-wrapper grid-wrapper">
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/160016.html" title="Катушка 13 Fishing Origin F1 Baitcast Reel">
+                                    <img src="images/products/160016/160016.200.png" alt="Катушка 13 Fishing Origin F1 Baitcast Reel">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/160016.html" title="Катушка 13 Fishing Origin F1 Baitcast Reel">Катушка 13 Fishing Origin F1 Baitcast Reel</a>
+                                </h5>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price">6 079</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/121598.html" title="Спиннинг Kola 2.1 4-16г">
+                                    <img src="images/products/121598/121598.200.jpg" alt="Спиннинг Kola 2.1 4-16г">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/121598.html" title="Спиннинг Kola 2.1 4-16г">Спиннинг Kola 2.1 4-16г</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">2 109</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/121688.html" title="Спиннинг Shimano S.T.C. Spin 270XH">
+                                    <img src="images/products/121688/121688.200.jpg" alt="Спиннинг Shimano S.T.C. Spin 270XH">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/121688.html" title="Спиннинг Shimano S.T.C. Spin 270XH">Спиннинг Shimano S.T.C. Spin 270XH</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">13 629</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/159975.html" title="Спиннинг 13 Fishing Fate Quest Travel Rod">
+                                    <img src="images/products/159975/159975.200.png" alt="Спиннинг 13 Fishing Fate Quest Travel Rod">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/159975.html" title="Спиннинг 13 Fishing Fate Quest Travel Rod">Спиннинг 13 Fishing Fate Quest Travel Rod</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">7 429</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/122262.html" title="Удилище Shimano Technium Trout Area TE Hi Power 8-450">
+                                    <img src="images/products/122262/122262.200.jpg" alt="Удилище Shimano Technium Trout Area TE Hi Power 8-450">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/122262.html" title="Удилище Shimano Technium Trout Area TE Hi Power 8-450">Удилище Shimano Technium Trout Area TE Hi Power 8-450</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">13 689</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/163548.html" title="Шнур Sufix Nano Braid 100m Aqua Camo UL">
+                                    <img src="images/products/163548/163548.200.jpg" alt="Шнур Sufix Nano Braid 100m Aqua Camo UL">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/163548.html" title="Шнур Sufix Nano Braid 100m Aqua Camo UL">Шнур Sufix Nano Braid 100m Aqua Camo UL</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">1 329</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/159975.html" title="Спиннинг 13 Fishing Fate Quest Travel Rod">
+                                    <img src="images/products/159975/159975.200.png" alt="Спиннинг 13 Fishing Fate Quest Travel Rod">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/159975.html" title="Спиннинг 13 Fishing Fate Quest Travel Rod">Спиннинг 13 Fishing Fate Quest Travel Rod</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">7 429</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/163548.html" title="Шнур Sufix Nano Braid 100m Aqua Camo UL">
+                                    <img src="images/products/163548/163548.200.jpg" alt="Шнур Sufix Nano Braid 100m Aqua Camo UL">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/163548.html" title="Шнур Sufix Nano Braid 100m Aqua Camo UL">Шнур Sufix Nano Braid 100m Aqua Camo UL</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">1 329</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/162590.html" title="Оснастка LJ Deep Pike Stinger Rig+Flexhead">
+                                    <img src="images/products/162590/162590.200.png" alt="Оснастка LJ Deep Pike Stinger Rig+Flexhead">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/162590.html" title="Оснастка LJ Deep Pike Stinger Rig+Flexhead">Оснастка LJ Deep Pike Stinger Rig+Flexhead</a>
+                                </h5>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price">549</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/121598.html" title="Спиннинг Kola 2.1 4-16г">
+                                    <img src="images/products/121598/121598.200.jpg" alt="Спиннинг Kola 2.1 4-16г">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/121598.html" title="Спиннинг Kola 2.1 4-16г">Спиннинг Kola 2.1 4-16г</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">2 109</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/162219.html" title="Шнур Varivas 8 Stripe Marking Edition 200m">
+                                    <img src="images/products/162219/162219.200.png" alt="Шнур Varivas 8 Stripe Marking Edition 200m">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/162219.html" title="Шнур Varivas 8 Stripe Marking Edition 200m">Шнур Varivas 8 Stripe Marking Edition 200m</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">2 749</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/122262.html" title="Удилище Shimano Technium Trout Area TE Hi Power 8-450">
+                                    <img src="images/products/122262/122262.200.jpg" alt="Удилище Shimano Technium Trout Area TE Hi Power 8-450">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/122262.html" title="Удилище Shimano Technium Trout Area TE Hi Power 8-450">Удилище Shimano Technium Trout Area TE Hi Power 8-450</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">13 689</span>
+                            </div>
+                        </div>
+                    </div>
+                <div>
+                    <div class="separator"></div>
+                    <div class="pagination">
+                        <a class="pagination-prev"><span class="arrow prev"></span><span class="text prev">Предыдущая страница</span></a>
+                        <a class="pagination-item">1</a>
+                        <a class="pagination-item">2</a>
+                        <a class="pagination-item">3</a>
+                        <a class="pagination-item">4</a>
+                        <a class="pagination-item">5</a>
+                        <a class="pagination-next"><span class="text next">Следующая страница</span><span class="arrow next"></span></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer container">
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Покупателям</h4>
+                    <ul>
+                        <li><a>Как сделать заказ</a></li>
+                        <li><a>Способы оплаты</a></li>
+                        <li><a>Доставка</a></li>
+                        <li><a>Возврат товара</a></li>
+                        <li><a>Возврат денежных средств</a></li>
+                        <li><a>Вопросы и ответы</a></li>
+                    </ul>                    
+                </nav>
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Компания</h4>
+                    <ul>
+                        <li><a>О нас</a></li>
+                        <li><a>Реквизиты</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Соцсети</h4>
+                    <ul>
+                        <li><a href="https://vk.com/novgoroskylc">ВКонтакте</a></li>
+                        <li><a>Однокрассники</a></li>
+                        <li><a href="https://www.youtube.com/c/NovgorodskyLeatherCraft">Yotube</a></li>
+                        <li><a href="https://dzen.ru/novgorodskylc">Дзен</a></li>
+                        <li><a href="https://t.me/novgoroskylc">Телеграм</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-item">
+                    <h4>+7(000) 000-00-00</h4>
+                    <div>пн-чт: с 10<sup>00</sup> до 18<sup>00</sup></div>
+                    <div>пт: с 10<sup>00</sup> до 16<sup>00</sup></div>
+                    <div>сб,вс: выходной</div>
+                </div>
+            </div>
+            <div class="copy container">&copy; 2022 ИП Хариненков В.В.</div>
+        </footer>
+    </body>
+</html>

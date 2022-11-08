@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+        <title>Рыболовный маказин "Клюёт!"</title>
+        <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="js/sale-timer.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/jquery.bxslider.css">
+    </head>
+    <body>
+        <div id="popup-wrapper"><div id="popup-content"><span class="popup-close"></span></div></div>
+        <div class="cookies-message">
+            <span class="cookies_text">Мы используем cookies для наилучшего представления нашего сайта. Отключить cookies Вы можете в настройках своего браузера.</span>
+            <button class="cookies-button">OK</button>
+        </div>
+        <div class="location-wrapper">
+            <div id="location" class="location container">Ваш город: <span>&nbsp;</span></div>
+        </div>
+        <header class="init">
+            <div class="header container">
+                <a href="index.html">
+                    <div class="logo"><img class="logo-full" src="images/logo-full.svg" alt="Клюёт!"><img class="logo-small" src="images/logo-small.svg" alt="Клюёт!"></div>
+                </a>
+                <div class="search">
+                    <form class="search-form">
+                        <input type="search" class="query" name="query" placeholder="Найти в магазине">
+                        <button type="button" class="search-button"></button>
+                    </form>
+                </div>
+                <a href="cart.html" class="header-item cart">Корзина</a>
+                <a class="header-item login">Вход</a>
+            </div>
+            <nav class="header container">
+                <a href="index.html"  title="Главная страница" class="nav-home"><span>Главная страница</span></a>
+                <a href="catalog.html" title="Каталог" class="nav-catalog" ><span>Каталог</span></a>
+                <a class="nav-payment" title="Оплата"><span>Оплата</span></a>
+                <a class="nav-delivery" title="Доставка"><span>Доставка</span></a>
+                <a href="contacts.html" title = "Контакты" class="nav-contacts"><span>Контакты</span></a>
+                <a href="cart.html" title="Корзина" class="nav-cart"><span>Корзина</span></a>
+                <a class="nav-login" titlе="Выход"><span>Вход</span></a>
+            </nav>
+        </header>
+        <main>
+            <div id="sale" class="container">
+                <div class="sale-wrapper">
+                    <div class="sale-info">
+                        <h2>Savage Gear</h2>
+                        <p>Распродажа. Скидки до 50%.</p>
+                    </div>
+                    <div class="sale-countdown">
+                        <div class="sale-countdown-header">До конца акции осталось:</div>
+                        <div class="days-left">
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="hours-left">
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="minutes-left">
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="days-left">
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit static"></span>
+                            </span>
+                        </div>
+                        <div class="sale-countdown-footer">
+                            Дней
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Часов
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Минут
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Секунд
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="slider">
+                    <div><img src="images/slide/slide-001.jpg" alt='Рыболовный магазин "Клюёт!"' title='За щукой с магазином "Клюёт!"'></div>
+                    <div><img src="images/slide/slide-002.jpg" alt='Рыболовный магазин "Клюёт!"' title='За щукой с магазином "Клюёт!"'></div>
+                    <div><img src="images/slide/slide-003.jpg" alt='Рыболовный магазин "Клюёт!"' title='За за окунем с магазином "Клюёт!"'></div>
+                    <div><img src="images/slide/slide-004.jpg" alt='Рыболовный магазин "Клюёт!"' title='За карпом с магазином "Клюёт!"'></div>
+                    <div><img src="images/slide/slide-005.jpg" alt='Рыболовный магазин "Клюёт!"' title='На рыбалку с магазином "Клюёт!"'></div>
+                    <div><img src="images/slide/slide-006.jpg" alt='Рыболовный магазин "Клюёт!"' title='За форелью с магазином "Клюёт!"'></div>
+                    <div><img src="images/slide/slide-007.jpg" alt='Рыболовный магазин "Клюёт!"' title='За трофеями с магазином "Клюёт!"'></div>
+                    <div><img src="images/slide/slide-008.jpg" alt='Рыболовный магазин "Клюёт!"' title='За окунем с магазином "Клюёт!"'></div>
+                </div>
+            </div>
+            <div class="container product-container">
+                <h3>Новинки</h3>
+                <div class="product-wrapper grid-wrapper">
+                    <div class="product-preview">
+                        <div class="badge badge-top-right new">
+                            <span>Новинка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/160016.html" title="Катушка 13 Fishing Origin F1 Baitcast Reel">
+                                    <img src="images/products/160016/160016.200.png" alt="Катушка 13 Fishing Origin F1 Baitcast Reel">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/160016.html" title="Катушка 13 Fishing Origin F1 Baitcast Reel">Катушка 13 Fishing Origin F1 Baitcast Reel</a>
+                                </h5>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price">6 079</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="badge badge-top-right new">
+                            <span>Новинка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/162590.html" title="Оснастка LJ Deep Pike Stinger Rig+Flexhead">
+                                    <img src="images/products/162590/162590.200.png" alt="Оснастка LJ Deep Pike Stinger Rig+Flexhead">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/162590.html" title="Оснастка LJ Deep Pike Stinger Rig+Flexhead">Оснастка LJ Deep Pike Stinger Rig+Flexhead</a>
+                                </h5>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price">549</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="badge badge-top-right new">
+                            <span>Новинка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/162219.html" title="Шнур Varivas 8 Stripe Marking Edition 200m">
+                                    <img src="images/products/162219/162219.200.png" alt="Шнур Varivas 8 Stripe Marking Edition 200m">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/162219.html" title="Шнур Varivas 8 Stripe Marking Edition 200m">Шнур Varivas 8 Stripe Marking Edition 200m</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">2 749</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="badge badge-top-right new">
+                            <span>Новинка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/159975.html" title="Спиннинг 13 Fishing Fate Quest Travel Rod">
+                                    <img src="images/products/159975/159975.200.png" alt="Спиннинг 13 Fishing Fate Quest Travel Rod">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/159975.html" title="Спиннинг 13 Fishing Fate Quest Travel Rod">Спиннинг 13 Fishing Fate Quest Travel Rod</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="price">7 429</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container separator"></div>
+            <div class="container product-container">
+                <h3>Распродажа</h3>
+                <div class="product-wrapper grid-wrapper">
+                    <div class="product-preview">
+                        <div class="badge badge-top-right sale">
+                            <span>Скидка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/121598.html" title="Спиннинг Kola 2.1 4-16г">
+                                    <img src="images/products/121598/121598.200.jpg" alt="Спиннинг Kola 2.1 4-16г">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/121598.html" title="Спиннинг Kola 2.1 4-16г">Спиннинг Kola 2.1 4-16г</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="old-price">2 709</span>
+                                <span class="new-price">2 109</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="badge badge-top-right sale">
+                            <span>Скидка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/121688.html" title="Спиннинг Shimano S.T.C. Spin 270XH">
+                                    <img src="images/products/121688/121688.200.jpg" alt="Спиннинг Shimano S.T.C. Spin 270XH">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/121688.html" title="Спиннинг Shimano S.T.C. Spin 270XH">Спиннинг Shimano S.T.C. Spin 270XH</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="old-price">15 329</span>
+                                <span class="new-price">13 629</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="badge badge-top-right sale">
+                            <span>Скидка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/122262.html" title="Удилище Shimano Technium Trout Area TE Hi Power 8-450">
+                                    <img src="images/products/122262/122262.200.jpg" alt="Удилище Shimano Technium Trout Area TE Hi Power 8-450">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/122262.html" title="Удилище Shimano Technium Trout Area TE Hi Power 8-450">Удилище Shimano Technium Trout Area TE Hi Power 8-450</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="old-price">17 329</span>
+                                <span class="new-price">13 689</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-preview">
+                        <div class="badge badge-top-right sale">
+                            <span>Скидка!</span>
+                        </div>
+                        <div class="product-block">
+                            <div class="image-wrapper">
+                                <a href="products/163548.html" title="Шнур Sufix Nano Braid 100m Aqua Camo UL">
+                                    <img src="images/products/163548/163548.200.jpg" alt="Шнур Sufix Nano Braid 100m Aqua Camo UL">
+                                </a>
+                            </div>
+                            <div class="info-wrapper">
+                                <h5 class="product-header">
+                                    <a href="products/163548.html" title="Шнур Sufix Nano Braid 100m Aqua Camo UL">Шнур Sufix Nano Braid 100m Aqua Camo UL</a>
+                                </h5>
+                            </div>    
+                            <div class="price-wrapper">
+                                <span class="old-price">1 729</span>
+                                <span class="new-price">1 329</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer container">
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Покупателям</h4>
+                    <ul>
+                        <li><a>Как сделать заказ</a></li>
+                        <li><a>Способы оплаты</a></li>
+                        <li><a>Доставка</a></li>
+                        <li><a>Возврат товара</a></li>
+                        <li><a>Возврат денежных средств</a></li>
+                        <li><a>Вопросы и ответы</a></li>
+                    </ul>                    
+                </nav>
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Компания</h4>
+                    <ul>
+                        <li><a>О нас</a></li>
+                        <li><a>Реквизиты</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-item">
+                    <h4 class="footer-menu">Соцсети</h4>
+                    <ul>
+                        <li><a href="https://vk.com/novgoroskylc">ВКонтакте</a></li>
+                        <li><a>Однокрассники</a></li>
+                        <li><a href="https://www.youtube.com/c/NovgorodskyLeatherCraft">Yotube</a></li>
+                        <li><a href="https://dzen.ru/novgorodskylc">Дзен</a></li>
+                        <li><a href="https://t.me/novgoroskylc">Телеграм</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-item">
+                    <h4>+7(000) 000-00-00</h4>
+                    <div>пн-чт: с 10<sup>00</sup> до 18<sup>00</sup></div>
+                    <div>пт: с 10<sup>00</sup> до 16<sup>00</sup></div>
+                    <div>сб,вс: выходной</div>
+                </div>
+            </div>
+            <div class="copy container">&copy; 2022 ИП Хариненков В.В.</div>
+        </footer>
+    </body>
+</html>
