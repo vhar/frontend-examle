@@ -1,6 +1,7 @@
 ### **Привет Мир!** ###
 Это моя дипломная работа на курсе "Frontend разоабота" пройденного в УЦ ["Профессионал"](https://eduprof.ru)
 
+[Посмотреть на сайте](https://vhar.github.io/frontend-examle)
 
 ![image](https://user-images.githubusercontent.com/5484416/200324144-ea4d5456-4145-49d6-8a7d-50485f4f6773.png)
 
